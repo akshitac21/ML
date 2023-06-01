@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DITECT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://img.freepik.com/free-vector/modern-blue-medical-background_1055-6880.jpg?w=2000');
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.registerbtn {
+  background-color: #e48912;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+
+input[type=submit]:hover {
+  background-color: #e48912;
+}
+
+
+</style>
+</head>
+<body>
+
+  
+  <h2>Results: </h2>
+{% if prediction == 1%}
+<h2 style="color: rgb(189, 16, 16);">Chances of having Diabetes is more, please consult a Doctor.</h2>
+<p style="text-align:center;"><img src="https://img.freepik.com/free-vector/diabetes-flat-composition-medical-with-patient-symptoms-complications-blood-sugar-meter-treatments-medication_1284-28998.jpg?w=2000" alt="CHANCES OF DIABETES" width="40%" height="40%"></p>
+{% elif prediction == 0%}
+<h2 style="color: rgb(0, 140, 0);">No Worries!!! You don't have Diabetes.</h2>
+<p style="text-align: center;"><img src="https://img.freepik.com/free-vector/healthy-people-carrying-different-icons_53876-66139.jpg" alt="NO DIABETES" width="40%" height="40%"></p>
+{% endif %}
+
+
+ 
+ 
+  
+  </body>
+  </html>
